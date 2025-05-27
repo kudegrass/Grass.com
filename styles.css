@@ -1,0 +1,402 @@
+:root {
+  --custom-green: rgb(24, 88, 31);
+  --custom-brown: rgb(182, 124, 30);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('images/pexels-timmossholder-974314.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body, html {
+  height: 100%;
+  font-family: sans-serif;
+  background-image: url(images/pexels-timmossholder-974314.jpg);
+}
+
+.main-grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidenav main";
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: 4rem 1fr;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: sidenav;
+  background-color: var(--custom-brown);
+  opacity: 0.9;
+}
+
+main {
+  grid-area: main;
+  background-color: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+    background-color: white;
+    opacity: 0.87;
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+    min-width: 400px;
+}
+
+/*====================Above is the rules for the basic layout of the webpage====================*/
+
+/*===========================================Header=============================================*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: var(--custom-green);
+  color: white;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#main-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+#search-bar {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  height: 2rem;
+}
+
+.search-button {
+  background-color: white;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem  ;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+}
+
+.nav-buttons {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      border-radius: 12px;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-buttons button {
+      background-color: #ffffff;
+      border: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(10, 10, 10, 0.2);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .nav-buttons button:hover {
+        transform: scale(1.1);
+    }
+
+    .arrow {
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .back .arrow {
+      border-width: 10px 14px 10px 0;
+      border-color: transparent var(--custom-green) transparent transparent;
+      transform: translateX(-2px);
+    }
+
+    .forward .arrow {
+      border-width: 10px 0 10px 14px;
+      border-color: transparent transparent transparent var(--custom-green);
+       transform: translateX(2px);
+    }
+
+/*===========================================Side Nav=============================================*/
+
+#side-nav ul {
+  list-style: none;
+}
+
+#side-nav li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  width: 15rem;
+  font-size: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  padding-left: 2rem;
+  line-height: 3.5rem;
+  border: 1px solid rgb(185, 130, 19);
+
+}
+
+#side-nav li a:hover,
+#side-nav li a.active {
+  background-color: rgb(99, 68, 8);
+  transform: translateX(1.2rem);
+  transition: transform 0.2s ease-in;
+  border-radius: 0 10px 10px 0;
+}
+
+
+/*===========================================homecontent=============================================*/
+
+.home-title, p {
+  margin-bottom: 1.5rem;
+}
+
+.home-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  padding: 2rem 2rem 0rem 3rem;
+  color: rgb(15, 94, 15);
+}
+
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: justify;
+  font-style: italic;
+  padding: 0rem 2rem 0rem 3rem;
+}
+
+/*===========================================courses content=============================================*/
+
+:root {
+  --hover: #43a047;           /* Hover green */
+  --click: #1b5e20;           /* Clicked green */
+  --glow: #a5d6a7;            /* Soft green glow */
+  --custom-green: #2e7d32;    /* Button base green */
+  --text: white;              /* Button text */
+}
+
+.areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+  .row {
+    background-color: #d3d3d3; /* Solid light gray */
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .row:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+    }
+
+      .row h2 {
+        margin-bottom: 3.7rem;
+}
+
+        .row h2 a {
+          display: inline-block;
+          text-decoration: none;
+          padding: 0.7rem 1.4rem;
+          background-color: var(--custom-green);
+          color: var(--text);
+          border-radius: 0.5rem;
+          font-weight: 600;
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+          position: relative;
+          transition: all 0.3s ease;
+          box-shadow: 0 6px 12px var(--glow); /* No transparency */
+}
+
+          .row h2 a:hover {
+            background-color: var(--hover);
+            box-shadow: 0 0 15px var(--hover), 0 8px 20px var(--glow);
+            transform: translateY(-2px);
+}
+
+            .row h2 a:active {
+              background-color: var(--click);
+              transform: scale(0.97);
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.row p {
+  font-size: 1rem; /* Increased font size */
+  color: #333;
+  text-align: left;
+}
+
+.topic-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 3rem;
+}
+
+/*===========================================about us content=============================================*/
+
+.about-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.612);
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #08410b;
+  margin-bottom: 2rem;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-info h3 {
+  margin: 0 0 0.5rem;
+  color: #1b5e20;
+  font-size: 1.5rem;
+}
+
+.member-info p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/*===========================================all courses content=============================================*/
+
+/* Container Styling */
+.crop-page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Title */
+.crop-title {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Intro and Summary */
+.crop-intro, .crop-summary {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Topics List */
+.crop-topics-list {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.crop-topics-list li {
+  margin-bottom: 10px;
+}
+
+/* Topic Buttons */
+.topic-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.topic-btn {
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.topic-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
