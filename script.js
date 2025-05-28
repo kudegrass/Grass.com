@@ -1,5 +1,5 @@
 const mainContent = document.querySelector('.main-content');
-const navLinks = document.querySelectorAll('#side-nav ul li[data-page]');
+const navLinks = document.querySelectorAll('#side-nav ul li a[data-page]');
 const headerTitle = document.querySelector('header h1');
 const mainLogo = document.querySelector('#main-logo');
 
@@ -55,13 +55,11 @@ function setActiveLink(anchor) {
 }
 
 // Initialize nav link event listeners
-navLinks.forEach(link => {
-  const anchor = link.querySelector('a');
-
+navLinks.forEach(anchor => {
   // Click on nav item
   anchor.addEventListener('click', e => {
     e.preventDefault();
-    const page = link.getAttribute('data-page');
+    const page = anchor.getAttribute('data-page');
     setActiveLink(anchor);
     loadPage(page);
   });
@@ -80,6 +78,7 @@ navLinks.forEach(link => {
     }
   });
 });
+
 
 // Click logo or header title to load home page
 mainLogo.addEventListener('click', () => {
