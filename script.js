@@ -135,3 +135,12 @@ document.querySelectorAll('.course-link').forEach(link => {
     loadPage(page);
   });
 });
+
+function updateActiveLinkByPage(page) {
+  const link = [...navLinks].find(a => a.getAttribute('data-page') === page);
+  if (link) setActiveLink(link);
+  else if (activeLink) {
+    activeLink.classList.remove('active');
+    activeLink = null;
+  }
+}
