@@ -146,3 +146,32 @@ body {
     overflow: visible;
   }
 }
+
+/* Course selector dropdown */
+.course-selector {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.course-selector label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+#course-select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+/* Course content display */
+.course-content {
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-top: 1rem;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grass - Courses</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-image"></div>
+
+  <div class="page-container">
+
+    <aside class="ad-slot left-ad">
+      <!-- Google AdSense code can go here -->
+    </aside>
+
+    <div class="content">
+      <header class="site-header">
+        <img src="images/GrassSiteLogo.png" alt="Grass Logo" class="logo-image">
+        <h2>Course Topics</h2>
+      </header>
+
+      <!-- Dropdown Nav -->
+      <div class="course-selector">
+        <label for="course-select">Choose a subject:</label>
+        <select id="course-select">
+          <option value="">-- Select a course --</option>
+          <option value="agri-economics">📊 Agricultural Economics</option>
+          <option value="agri-engineering">🛠️ Agricultural Engineering</option>
+          <option value="agri-extension">📣 Agricultural Extension</option>
+          <option value="agri-laws">⚖️ Agricultural Laws & Ethics</option>
+          <option value="agri-statistics">📐 Agricultural Statistics</option>
+          <option value="animal-science">🐄 Animal Science & Husbandry</option>
+          <option value="crop-production">🌱 Crop Production & Management</option>
+          <option value="soil-science">🌾 Soil Science & Fertility</option>
+        </select>
+      </div>
+
+      <!-- Dynamic Content Area -->
+      <div id="course-content" class="course-content">
+        <p>Please select a course from the dropdown above.</p>
+      </div>
+    </div>
+
+    <aside class="ad-slot right-ad">
+      <!-- Google AdSense code can go here -->
+    </aside>
+  </div>
+
+  <script src="courses.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
