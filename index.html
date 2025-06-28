@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Grass.com</title>
-    <link rel="icon" href="images/grasslogo.jpg" type="image/jpeg" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grass</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="main-grid">
-        <header>
-            <div class="header-left">
-                <img src="./images/grasslogo.jpg" alt="Grass logo" id="main-logo" />
-                <form class="search-form" role="search" aria-label="Site search">
-                    <input type="search" placeholder="Search..." id="search-bar" name="q" />
-                    <button type="submit" class="search-button" aria-label="Submit Search">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-            </div>
-            <h1 class="site-title">Grass.com</h1>
-            <div class="nav-buttons">
-                <button class="back" onclick="history.back()">
-                    <span class="arrow"></span>
-                </button>
-                <button class="forward" onclick="history.forward()">
-                    <span class="arrow"></span>
-                </button>
-            </div>
-        </header>
+  <div class="background-image"></div>
+  <div class="page-container">
 
-        <nav id="side-nav">
-            <ul>
-                <li><a href="#" data-page="./nav/home.html">Home</a></li>
-                <li><a href="#" data-page="./nav/about.html">About</a></li>
-                <li><a href="#" data-page="./nav/courses.html">Courses</a></li>
-                <li><a href="#" data-page="./nav/test.html">Test</a></li>
-            </ul>
-        </nav>
+    <aside class="ad-slot left-ad">
+      <!-- Google AdSense code will go here -->
+    </aside>
 
-        <main>
-            <div class="main-content"></div>
-        </main>
+    <div class="content">
+      <header class="site-header">
+        <img src="images/GrassSiteLogo.png" alt="Grass Logo" class="logo-image">
+      </header>
+
+      <main class="about-section">
+        <h2>About</h2>
+        <p>
+        <strong>Grass</strong> is a free and simple web-based reviewer designed to help aspiring agriculturists prepare for the Philippine Licensure Examination for Agriculturists (LEA).
+        This site focuses on making review sessions more accessible, interactive, and organized — whether you're self-studying or reviewing with others.
+        </p>
+        <p>
+        We aim to simplify complex agricultural concepts, provide quiz-based practice, and serve as a digital companion to traditional review materials.
+        </p>
+        <p class="credits">
+        Grass is a collaborative project developed by JL Dupalco and Resli Vidal. We built this platform to support examinees in reaching their goals, one topic at a time.
+        </p>
+
+        <div class="action-buttons">
+          <a href="courses.html" class="btn">Courses</a>
+          <a href="test.html" class="btn test-btn">Test</a>
+        </div>
+      </main>
     </div>
 
-    <script src="script.js"></script>
+    <aside class="ad-slot right-ad">
+      <!-- Google AdSense code will go here -->
+    </aside>
+
+  </div>
 </body>
 </html>
